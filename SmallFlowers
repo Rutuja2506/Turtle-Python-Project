@@ -1,0 +1,40 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon May 18 14:26:52 2020
+
+@author: Dell
+"""
+import turtle
+
+sheldon=turtle.Turtle()
+sheldon.speed(20)
+sheldon.getscreen().bgcolor("#C19EDF")
+
+# for i in range(5):
+#     sheldon.forward(50)
+#     sheldon.left(216)
+sheldon.penup()
+sheldon.goto((-200,100))
+sheldon.pendown()
+
+
+
+
+def star(turtle,size):
+    if size<=10:
+        return
+    else:
+        turtle.begin_fill()
+        for i in range(5):
+            
+            turtle.forward(size)
+            star(turtle,size/3)
+            turtle.left(216)
+        turtle.end_fill()
+            
+star(sheldon, 300)
+    
+
+turtle.done()
+turtle.bye()
+
